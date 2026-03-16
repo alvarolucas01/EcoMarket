@@ -18,14 +18,20 @@
         <img src="imagenes/necesito_hacer_un_logotipo_para_un_1.jpg" alt="Eco Market" class="logo">
 
         <nav class="nav">
+
             <a href="#inicio">Inicio</a>
+            <a href="#sobre-nosotros">Sobre Nosotros</a>
             <a href="#productos">Productos</a>
             <a href="#contacto">Contacto</a>
-            <button class="cart-btn">
-                🛒 <span id="cart-count">0</span>
-            </button>
-            <button class="cart-btn">
-                 <span id="cart-count">Inicia Sesión</span>
+
+            <button id="dark-mode">🌙</button>
+
+            <a href="carrito.html" class="cart-btn">
+            🛒 <span id="cart-count">0</span>
+            </a>
+
+            <button class="login-btn">
+            Iniciar sesión
             </button>
         </nav>
     </div>
@@ -34,15 +40,55 @@
 <main>
 
 <section id="inicio" class="cabezera">
-    <h1 class="banner">Consumo responsable, productos reales </h1>
-    <p class="sub-banner">Apoya productores locales y cuida el planeta.</p>
+    <div class="cabezera-container">
+    <h1 class="banner">Bienvenido a Eco Market</h1>
+    <p class="info-banner">Tu tienda online de productos ecológicos y sostenibles. Apoya productores locales y cuida el planeta.</p>
+    <p class="info-banner">Descubre nuestra selección de alimentos frescos, bebidas naturales y productos para el hogar, todos con un compromiso real con el medio ambiente.</p>
+    <p class="info-banner">En Eco Market, cada compra es un paso hacia un futuro más verde. ¡Únete al cambio hoy!</p>
+    </div>
+
 </section>
 <div class="wave"></div>
-<section>
-    <div class="info-banner">
-        <p>En Eco Market, cada compra es un paso hacia un futuro más verde. ¡Únete al cambio hoy!</p>
+
+
+<section id="sobre-nosotros" class="sobre-nosotros">
+    <div class="sobre-nosotros-container">
+
+        <div class="sobre-nosotros-text">
+            <h2>Sobre Nosotros</h2>
+            <p>
+                En <strong>Eco Market</strong> creemos que cada decisión de compra tiene el poder
+                de transformar el mundo. Apostamos por productos ecológicos,
+                sostenibles y de origen responsable, apoyando a pequeños productores
+                locales y reduciendo el impacto ambiental.
+            </p>
+
+            <p>
+                Nuestro compromiso es ofrecer calidad, frescura y transparencia.
+                Trabajamos directamente con agricultores y proveedores que comparten
+                nuestros valores: respeto por la tierra, comercio justo y consumo consciente.
+            </p>
+
+            <div class="sobre-nosotros-values">
+                <a class="value" href="#sostenibilidad">
+                     <span><strong>Sostenibilidad real</strong></span>
+                </a>
+                <a class="value" href="#apoyo-local">
+                     <span><strong>Apoyo local</strong></span>
+                </a>
+                <a class="value" href="#compromiso-ambiental">
+                     <span><strong>Compromiso ambiental</strong></span>
+                </a>
+            </div>
+        </div>
+
+        <div class="sobre-nosotros-image">
+            <img src="imagenes/baner.jpg" alt="Equipo Eco Market">
+        </div>
+
     </div>
 </section>
+
 
 <section id="productos" class="products-section">
     <h2>Nuestros Productos</h2>
@@ -61,69 +107,183 @@
             <option value="agua">Agua mineral</option>
         </optgroup>
 </select>
+<input type="text" id="buscador" placeholder="Buscar productos...">
 
     <div class="products-grid">
 
-        <article class="product-card">
+        <article class="product-card" data-category="verduras">
                 <img src="imagenes/aguacate.jpg" alt="Aguacate Hass ecológico">
             <h3>Aguacate Hass Premium</h3>
             <p>Origen: Andalucía</p>
             <span class="price">3,50 € / kg</span>
-            <button class="add-to-cart" data-name="Aguacate Hass" data-price="3.5">
+            <button class="add-to-cart" data-name="Aguacate Hass" data-price="3.5" data-image="imagenes/aguacate.jpg">
                 Añadir al carrito
             </button>
         </article>
 
-        <article class="product-card">
+        <article class="product-card" data-category="frutas">
             <img src="imagenes/Platano_de_canarias.jpg" alt="Plátano Canario">
             <h3>Plátano Canario</h3>
             <p>Origen: Islas Canarias</p>
             <span class="price">2,80 € / kg</span>
-            <button class="add-to-cart" data-name="Plátano Canario" data-price="2.8">
+            <button class="add-to-cart" data-name="Plátano Canario" data-price="2.8" data-image="imagenes/Platano_de_canarias.jpg">
                 Añadir al carrito
             </button>
         </article>
 
-        <article class="product-card">
+        <article class="product-card" data-category="frutas">
             <img src="imagenes/MANZANA-GOLDEN-ECOLOGICO-COMEDELAHUERTA-1.jpg" alt="Manzana Royal Gala">
             <h3>Manzana Royal Gala</h3>
             <p>Origen: España</p>
             <span class="price">2,20 € / kg</span>
-            <button class="add-to-cart" data-name="Manzana Gala" data-price="2.2">
+            <button class="add-to-cart" data-name="Manzana Gala" data-price="2.2" data-image="imagenes/MANZANA-GOLDEN-ECOLOGICO-COMEDELAHUERTA-1.jpg">
                 Añadir al carrito
             </button>
         </article>
 
-        <article class="product-card">
+        <article class="product-card" data-category="dulces">
             <img src="imagenes/chocolate 100.jpg" alt="Chocolate negro 100% Bio">
             <h3>Chocolate negro 100% Bio</h3>
             <p>Origen: España</p>
             <span class="price">5,40 € / kg</span>
-            <button class="add-to-cart" data-name="Chocolate negro 100% Bio" data-price="2.2">
+            <button class="add-to-cart" data-name="Chocolate negro 100% Bio" data-price="5.4" data-image="imagenes/chocolate 100.jpg">
                 Añadir al carrito
             </button>
         </article>
 
-        <article class="product-card">
+        <article class="product-card" data-category="dulces">
+            <img src="imagenes/chocolate 100.jpg" alt="Chocolate negro 100% Bio">
+            <h3>Chocolate negro 100% Bio</h3>
+            <p>Origen: España</p>
+            <span class="price">5,40 € / kg</span>
+            <button class="add-to-cart" data-name="Chocolate negro 100% Bio" data-price="5.4" data-image="imagenes/chocolate 100.jpg">
+                Añadir al carrito
+            </button>
+        </article>
+
+        <article class="product-card" data-category="dulces">
+            <img src="imagenes/chocolate 100.jpg" alt="Chocolate negro 100% Bio">
+            <h3>Chocolate negro 100% Bio</h3>
+            <p>Origen: España</p>
+            <span class="price">5,40 € / kg</span>
+            <button class="add-to-cart" data-name="Chocolate negro 100% Bio" data-price="5.4" data-image="imagenes/chocolate 100.jpg">
+                Añadir al carrito
+            </button>
+        </article>
+
+        <article class="product-card" data-category="dulces">
+            <img src="imagenes/chocolate 100.jpg" alt="Chocolate negro 100% Bio">
+            <h3>Chocolate negro 100% Bio</h3>
+            <p>Origen: España</p>
+            <span class="price">5,40 € / kg</span>
+            <button class="add-to-cart" data-name="Chocolate negro 100% Bio" data-price="5.4" data-image="imagenes/chocolate 100.jpg">
+                Añadir al carrito
+            </button>
+        </article>
+
+        <article class="product-card" data-category="dulces">
+            <img src="imagenes/chocolate 100.jpg" alt="Chocolate negro 100% Bio">
+            <h3>Chocolate negro 100% Bio</h3>
+            <p>Origen: España</p>
+            <span class="price">5,40 € / kg</span>
+            <button class="add-to-cart" data-name="Chocolate negro 100% Bio" data-price="5.4" data-image="imagenes/chocolate 100.jpg">
+                Añadir al carrito
+            </button>
+        </article>
+
+        <article class="product-card" data-category="dulces">
+            <img src="imagenes/chocolate 100.jpg" alt="Chocolate negro 100% Bio">
+            <h3>Chocolate negro 100% Bio</h3>
+            <p>Origen: España</p>
+            <span class="price">5,40 € / kg</span>
+            <button class="add-to-cart" data-name="Chocolate negro 100% Bio" data-price="5.4" data-image="imagenes/chocolate 100.jpg">
+                Añadir al carrito
+            </button>
+        </article>
+
+        <article class="product-card" data-category="frutas">
             <img src="imagenes/compota de manzana.jpeg" alt="Compota de manzana Bio">
             <h3>Compota de manzana Bio</h3>
             <p>Origen: España</p>
             <span class="price">5,45 € / kg</span>
-            <button class="add-to-cart" data-name="Compota de manzana Bio" data-price="2.2">
+            <button class="add-to-cart" data-name="Compota de manzana Bio" data-price="5.45" data-image="imagenes/compota de manzana.jpeg">
                 Añadir al carrito
             </button>
         </article>
 
-        <article class="product-card">
+        <article class="product-card" data-category="dulces">
             <img src="imagenes/crema de cacahuete2.jpeg" alt="Crema de cacahuete Bio">
             <h3>Crema de cacahuete Bio</h3>
             <p>Origen: España</p>
             <span class="price">7,95 € / kg</span>
-            <button class="add-to-cart" data-name="Crema de cacahuete Bio" data-price="2.2">
+            <button class="add-to-cart" data-name="Crema de cacahuete Bio" data-price="7.95" data-image="imagenes/crema de cacahuete2.jpeg">
                 Añadir al carrito
             </button>
         </article>
 
+    </div>
+</section>
+
+<section id="sostenibilidad">
+    
+    <div class="contenedor">
+    
+    <div class="texto">
+        <h2>Sostenibilidad real</h2>
+
+    <p>En Eco Market, la sostenibilidad no es solo una palabra, es nuestro compromiso diario. Creemos que cada pequeña decisión de consumo puede marcar una gran diferencia para el planeta y para las generaciones futuras.
+
+Trabajamos con proveedores que utilizan prácticas agrícolas regenerativas, reducen el uso de productos químicos y cuidan la salud del suelo y de los ecosistemas. Además, priorizamos productos con envases reciclables o reutilizables para disminuir el impacto ambiental.
+
+Cada producto que llega a nuestras estanterías ha sido seleccionado cuidadosamente para garantizar su calidad, su origen responsable y su respeto por el medio ambiente. Nuestro objetivo es ofrecer alternativas que permitan a nuestros clientes llevar un estilo de vida más consciente, saludable y sostenible.
+
+En Eco Market queremos demostrar que consumir de forma responsable es posible sin renunciar a la calidad, al sabor ni al bienestar.</p>
+    </div>
+        <div class="imagen">
+        <img src="imagenes/sostenibilidad.jpg" alt="Sostenibilidad en Eco Market" class="sostenibilidad-image">
+        <p class="caption">Nuestros productos son seleccionados con un compromiso real con el medio ambiente.</p>
+        </div>
+    </div>
+
+</section>
+
+<section id="apoyo-local">
+    
+    <div class="contenedor">
+    
+    <div class="texto">
+        <h2>Apoyo a la comunidad local</h2>
+        <p>
+En Eco Market creemos firmemente en la importancia de apoyar a los productores y agricultores de nuestra comunidad. Por eso colaboramos con pequeños productores locales que trabajan con dedicación y respeto por la naturaleza.
+
+Al elegir productos de proximidad, no solo garantizamos alimentos más frescos y de mayor calidad, sino que también contribuimos al desarrollo de la economía local y reducimos el impacto ambiental del transporte.
+
+Nuestro objetivo es crear una red de colaboración justa entre productores y consumidores, donde el trabajo responsable sea valorado y recompensado. Cuando compras en Eco Market, también estás apoyando a familias, agricultores y emprendedores de tu comunidad.        </p>
+    </div>
+    <div class="imagen">
+    <img src="imagenes/apoyo_comunidad.png" alt="Apoyo a productores locales" class="apoyo-local-image">
+    <p class="caption">Cada compra en Eco Market apoya a productores locales y fortalece la economía de tu comunidad.</p>
+    </div>
+    </div>
+</section>
+
+<section id="compromiso-ambiental">
+   
+    <div class="contenedor">
+    
+    <div class="texto">
+         <h2>Compromiso ambiental</h2>
+    <p>
+Nuestro compromiso con el medio ambiente va más allá de los productos que ofrecemos. En Eco Market trabajamos constantemente para reducir nuestra huella ecológica y promover prácticas más responsables en todas nuestras actividades.
+
+Utilizamos empaques sostenibles, fomentamos el uso de bolsas reutilizables y buscamos reducir al máximo los residuos generados en nuestra tienda. Además, apoyamos iniciativas y proyectos que trabajan para proteger la biodiversidad y los recursos naturales.
+
+Creemos que el cambio hacia un futuro más sostenible comienza con acciones concretas. Por eso invitamos a nuestros clientes a formar parte de este compromiso, adoptando hábitos de consumo más conscientes y responsables.    </p>
+    </div>
+    <div class="imagen">
+    <img src="imagenes/compromiso-ambiental.jpg" alt="Compromiso ambiental de Eco Market" class="compromiso-ambiental-image">
+    <p class="caption">En Eco Market, cada paso que damos está orientado a proteger el medio ambiente y promover un futuro más sostenible.</p>
+    </div>
     </div>
 </section>
 
@@ -186,5 +346,6 @@
 </footer>
 
 <script src="script.js"></script>
+
 </body>
 </html>

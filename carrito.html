@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carrito | Eco Market</title>
+<link rel="stylesheet" href="carrito.css">
+</head>
+<body>
+
+<header>
+    <div class="header">
+        <div class="logo">
+            <img src="imagenes/necesito_hacer_un_logotipo_para_un_1.jpg" alt="Eco Market" class="logo">
+        </div>
+        <h1>Tu carrito: </h1>
+        <a href="index.html" id="seguir-comprando">Volver a la página principal</a>
+    </div>
+</header>
+
+<main class="container">
+  <div id="lista-carrito"></div>
+  <div class="resumen">
+    <h2>Resumen</h2>
+    <p>Total: <span id="total">0€</span></p>
+    <button class="pagar" onclick="simularPago()">Finalizar compra</button>
+    <button class="vaciar" onclick="vaciarCarrito()">Vaciar carrito</button>
+  </div>
+</main>
+
+<script src="carrito.js"></script>
+</body>
+</html>
