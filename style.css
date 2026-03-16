@@ -1,7 +1,10 @@
+/* ESTILOS GENERALES */
+
 html {
     scroll-behavior: smooth;
 }
 
+/* VARIABLES DE ESTILO */
 :root {
     --green: #44e349ba;
     --light-green: #b6f5bc;
@@ -9,6 +12,7 @@ html {
     --bg: #deefdd76;
 }
 
+/* ELEMENTOS GENERALES */
 * {
     margin: 0;
     padding: 0;
@@ -16,12 +20,15 @@ html {
     transition: all 0.25s ease;
 }
 
+/* CUERPO DE LA PÁGINA */
 body {
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: var(--bg);
     color: var(--dark);
     background-size: 20px 20px;
 }
+
+/* BANNER DE BIENVENIDA */
 
 .banner {
     font-size: 48px;
@@ -52,7 +59,7 @@ body {
     position:sticky;
 }
 
-/* HEADER */
+/* CABEZERA */
 .header {
     position: sticky;
     top: 0;
@@ -74,70 +81,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.logo {
-    height: 60px;
-    border-radius: 25px;
-}
-
-.logo:hover {
-    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
-    transform: translateY(-5px);
-    transition: all 0.3s ease;
-}
-
-.nav {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.nav a {
-    text-decoration: none;
-    font-weight: 600;
-    color: var(--dark);
-}
-.nav a:hover {
-    color: var(--green);
-    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
-    transform: translateY(-5px);
-    transition: all 0.3s ease;
-}
-
-.cart-btn {
-    background-color: var(--green);
-    color: white;
-    border: none;
-    padding: 8px 14px;
-    border-radius: 20px;
-    cursor: pointer;
-}
-
-.login-btn {
-    background-color: var(--green);
-    color: white;
-    border: 2px var(--green);
-    padding: 8px 14px;
-    border-radius: 20px;
-    cursor: pointer;
-}
-
-/* HERO */
-.cabezera {
-    min-height: 70vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-
-    background: linear-gradient(
-        rgba(232, 245, 233, 0.278),
-        rgba(232, 245, 233, 0.26)
-    ),
-    url("imagenes/background2.jpg") center/cover;
-    animation: fadeIn 1s ease;
 }
 
 .cabezera-container {
@@ -164,6 +107,76 @@ body {
     color: var(--dark);
 }
 
+/* ESTILO DEL LOGO */
+.logo {
+    height: 60px;
+    border-radius: 25px;
+}
+
+.logo:hover {
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+}
+
+/* NAVEGACIÓN */
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav a {
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--dark);
+}
+.nav a:hover {
+    color: var(--green);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+}
+
+/* BOTONES DE CARRITO, LOGIN */
+
+.cart-btn {
+    background-color: var(--green);
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.login-btn {
+    background-color: var(--green);
+    color: white;
+    border: 2px var(--green);
+    padding: 8px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* HERO  */
+.cabezera {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background: linear-gradient(
+        rgba(232, 245, 233, 0.278),
+        rgba(232, 245, 233, 0.26)
+    ),
+    url("imagenes/background2.jpg") center/cover;
+    animation: fadeIn 1s ease;
+}
+
+/* APARTADO SOBRE NOSOTROS */
+
 .sobre-nosotros {
     padding: 80px 20px;
     background-color: white;
@@ -179,7 +192,8 @@ body {
     margin-bottom: 40px;
 }
 
-.sobre-nosotros {    background: linear-gradient(135deg, #b3f4b89b, #ffddbda3);
+.sobre-nosotros {    
+    background: linear-gradient(135deg, #b3f4b89b, #ffddbda3);
     padding: 60px 20px;
     text-align: center;
     font-weight: 500;
@@ -229,7 +243,7 @@ body {
 }
 
 .contenedor{
-     max-width: 1100px;
+    max-width: 1100px;
     margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -246,6 +260,7 @@ body {
     padding: 10px 10px;
 }
 
+/* IMAGEN SOBRE NOSOTROS  */
 .imagen{
     flex: 1;
     text-align: right;
@@ -256,7 +271,7 @@ body {
     transform: translateY(-6px);
     border-radius: 20px;
 }
-
+/* SECCIÓN BOTONES SOBRE NOSOTROS  */
 section h2{
     font-size: 32px;
     margin-bottom: 20px;
@@ -269,7 +284,7 @@ section#sostenibilidad, #apoyo-local, #compromiso-ambiental {
     margin-top: 40px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
-
+/* DESCRIPCIÓN DE LA IMAGEN  */
 .caption {
     text-align: center;
     margin-top: 10px;
@@ -284,13 +299,11 @@ section img {
     margin-bottom: 20px;
 }
 
-
-
 section a {
     text-decoration: none;
     color: var(--dark);
 }   
-
+/* VALORES */
 .value {
     width: 230px;
     text-align: fit-content;
@@ -300,7 +313,7 @@ section a {
     font-weight: 500;
 }
 
-
+/* SELECTOR DE CATEGORÍA */
 .category-select {
     padding: 10px 14px;
     border-radius: 8px;
@@ -317,7 +330,7 @@ label {
     font-style: oblique;
 }
 
-/* PRODUCTS */
+/* SECCIÓN DE PRODUCTOS */
 .products-section {
     max-width: 1100px;
     margin: auto;
@@ -328,13 +341,14 @@ label {
     text-align: center;
     margin-bottom: 40px;
 }
-
+/* LISTA DE PRODUCTOS */
 .products-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 25px;
 }
 
+/* TARJETA DE PRODUCTO */
 .product-card {
     position: relative;
     overflow: hidden;
@@ -346,6 +360,7 @@ label {
     background-color: #ffffff9a;
 }
 
+/* EFECTO DE SOMBRA CARTA DE PRODUCTO */
 .product-card::after {
     content: "";
     position: absolute;
@@ -358,6 +373,7 @@ label {
     z-index: -1;
 }
 
+/* SELLO ECO */
 .product-card::before {
     content: "ECO";
     position: absolute;
@@ -370,6 +386,7 @@ label {
     border-radius: 8px;
 }
 
+/* IMAGEN DE LA TARJETA DE PRODUCTO */
 .product-card img {
     width: 100%;
     height: 200px;
@@ -397,11 +414,12 @@ label {
     transition: all 0.3s ease;
 }
 
-
+/* TÍTULO DE LA TARJETA DE PRODUCTO */
 .product-card h3 {
     margin-bottom: 10px;
 }
 
+/* PRECIO DEL PRODUCTO */
 .price {
     display: block;
     margin: 15px 0;
@@ -409,6 +427,7 @@ label {
     color: var(--green);
 }
 
+/* BOTÓN AÑADIR AL CARRITO */
 .add-to-cart {
     background-color: var(--green);
     color: white;
@@ -436,6 +455,7 @@ button:hover::after {
     opacity: 1;
 }
 
+/* BOTÓN DE VUELTA AL INICIO */
 .back-to-top {
     position: fixed;
     bottom: 30px;
@@ -453,13 +473,6 @@ button:hover::after {
 }
 
 
-/* Contenedor que limita el ancho y centra el slider */
-.slider-wrapper {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
 /* El carrusel */
 .slider {
   display: flex;
@@ -468,6 +481,13 @@ button:hover::after {
   scroll-snap-type: x mandatory; /* Activa el "magnetismo" */
   padding: 20px 0;
   scrollbar-width: thin; /* Estilo de barra para Firefox */
+}
+
+/* Contenedor que limita el ancho y centra el slider */
+.slider-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 /* Personalización de la barra de scroll (Opcional) */
@@ -479,7 +499,7 @@ button:hover::after {
   border-radius: 10px;
 }
 
-/* Las tarjetas de reseña */
+/* TARJETAS DE RESEÑA */
 .resena-card {
   flex: 0 0 300px; /* No se encogen, ancho fijo de 300px */
   background-color: #ffffff;
@@ -491,7 +511,7 @@ button:hover::after {
   text-align: center;
 }
 
-/* Estilos de texto */
+/* ESTILO DEL TEXTO DE LAS RESEÑAS */
 .resena-card p {
   font-style: italic;
   color: #555;
@@ -518,6 +538,7 @@ button:hover::after {
     box-shadow: 0 20px 45px rgba(0,0,0,0.15);
 }
 
+/* TOAST DE CONFIRMACIÓN DE AÑADIDO AL CARRITO */
 .toast{
 position:fixed;
 bottom:30px;
@@ -574,9 +595,6 @@ background:#1a1a1ac2;
 color:white;
 }
 
-
-
-
 /* ======================= */
 /* ANIMACIONES SCROLL */
 /* ======================= */
@@ -591,7 +609,6 @@ opacity:1;
 transform:translateY(0);
 transition: all 0.8s ease;
 }
-
 
 /* CONTACT */
 .contact {
@@ -616,11 +633,13 @@ section:hover {
     border-radius: 20px;
 }
 
+/* OLEDAÑO */
 .wave {
     height: 80px;
     background: url("imagenes/wave.svg") center / cover no-repeat;
 }
 
+/* ANIMACIONES */
 @keyframes fadeIn {
     from {
         opacity: 0;

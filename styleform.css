@@ -1,4 +1,4 @@
-/* RESET BÁSICO */
+/* ELEMENTOS GENERALES */
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +7,7 @@
   
 }
 
-/* FONDO GENERAL */
+/* FONDO GENERAL DEL CUERPO */
 .eco-body {
   background: linear-gradient(135deg, #8ee691f6, #f1f8e9c7);
   min-height: 100vh;
@@ -19,7 +19,7 @@
   transition: all 0.25s ease;
 }
 
-/* HEADER */
+/* CABEZERA DEL FORMULARIO */
 .form-header {
   text-align: center;
   padding: 2rem 1rem;
@@ -62,6 +62,7 @@ main {
   flex-direction: column;
 }
 
+/* ETIQUETA */
 .eco-form label {
   margin-top: 1rem;
   margin-bottom: 0.3rem;
@@ -69,6 +70,7 @@ main {
   color: #2e7d32;
 }
 
+/* CAMPOS DE ENTRADA */
 .eco-form input,
 .eco-form textarea {
   padding: 0.7rem;
@@ -78,6 +80,7 @@ main {
   transition: border 0.3s, box-shadow 0.3s;
 }
 
+/* FOCO EN CAMPOS DE ENTRADA */
 .eco-form input:focus,
 .eco-form textarea:focus {
   outline: none;
@@ -85,7 +88,7 @@ main {
   box-shadow: 0 0 0 2px rgba(102, 187, 106, 0.2);
 }
 
-/* BOTÓN */
+/* BOTÓN DEL FORMULARIO */
 .eco-form button {
   margin-top: 1.5rem;
   padding: 0.8rem;
@@ -109,7 +112,7 @@ main {
   margin-top: 1.5rem;
   text-align: center;
 }
-
+/* ESTILO DEL LINK PARA VOLVER */
 .eco-link {
   text-decoration: none;
   color: #2e7d32;
