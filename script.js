@@ -4,6 +4,12 @@ const cartCount = document.getElementById("cart-count");
 
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
+// 👉 NUEVA FUNCIÓN
+function actualizarContadorCarrito() {
+  const total = carrito.reduce((acc, producto) => acc + producto.cantidad, 0);
+  cartCount.textContent = total;
+}
+
 botones.forEach(boton => {
   boton.addEventListener("click", () => {
     const producto = {
@@ -22,7 +28,7 @@ botones.forEach(boton => {
 
     localStorage.setItem("carrito", JSON.stringify(carrito));
     mostrarToast();
-    cartCount.actualizarContadorCarrito();
+    actualizarContadorCarrito(); // ✅ llamada correcta
   });
 });
 
@@ -33,6 +39,9 @@ function mostrarToast() {
     toast.classList.remove("show");
   }, 2000);
 }
+
+// 👉 IMPORTANTE: actualizar al cargar la página
+actualizarContadorCarrito();
 
 
 

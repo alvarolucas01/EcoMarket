@@ -172,7 +172,6 @@ body {
         rgba(232, 245, 233, 0.26)
     ),
     url("imagenes/background2.jpg") center/cover;
-    animation: fadeIn 1s ease;
 }
 
 /* APARTADO SOBRE NOSOTROS */
@@ -283,6 +282,11 @@ section#sostenibilidad, #apoyo-local, #compromiso-ambiental {
     background: linear-gradient(135deg, #b3f4b89b, #ffddbda3);
     margin-top: 40px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+section#sostenibilidad p, #apoyo-local p, #compromiso-ambiental p {
+    font-size: 19px;
+    color: var(--dark);
+    
 }
 /* DESCRIPCIÓN DE LA IMAGEN  */
 .caption {
@@ -472,6 +476,10 @@ button:hover::after {
     transform: translateY(-4px);
 }
 
+#contacto a{
+    padding: 60px 20px;
+    color: var(--green)
+}
 
 /* El carrusel */
 .slider {
@@ -538,6 +546,7 @@ button:hover::after {
     box-shadow: 0 20px 45px rgba(0,0,0,0.15);
 }
 
+
 /* TOAST DE CONFIRMACIÓN DE AÑADIDO AL CARRITO */
 .toast{
 position:fixed;
@@ -592,6 +601,10 @@ color:white;
 
 .dark-mode .footer{
 background:#1a1a1ac2;
+color:white;
+}
+
+.dark-mode .sobre-nosotros-values .value{
 color:white;
 }
 
